@@ -17,9 +17,15 @@ let obj = {
     mango: 'yellow'
 }
 
-obj.apple = 'green';
-delete obj.orange
-
 for (let key in obj) {
     console.log(obj[key]);
 }
+
+obj.apple = 'green';
+delete obj.orange
+
+let func = (object, key) => {
+    return object[key];
+}
+
+console.log(func(obj, 'apple'))
